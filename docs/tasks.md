@@ -37,23 +37,23 @@
 ### 1.2 TailwindCSS 설정
 
 - [x] 1.2.1 TailwindCSS 설치 확인 ✅ (v4 설치됨)
-- [ ] 1.2.2 `tailwind.config.ts` 커스텀 테마 설정 (TailwindCSS v4는 CSS 기반 설정)
-- [ ] 1.2.3 커스텀 색상 팔레트 정의 (primary, secondary, accent)
-- [ ] 1.2.4 커스텀 폰트 설정 (Pretendard 또는 Noto Sans KR)
-- [x] 1.2.5 `globals.css` 기본 스타일 정의 ✅ (기본 설정 완료)
+- [x] 1.2.2 `tailwind.config.ts` 커스텀 테마 설정 ✅ (CSS 기반 설정 완료)
+- [x] 1.2.3 커스텀 색상 팔레트 정의 (primary, secondary, accent) ✅
+- [x] 1.2.4 커스텀 폰트 설정 (Pretendard 또는 Noto Sans KR) ✅
+- [x] 1.2.5 `globals.css` 기본 스타일 정의 ✅ (커스텀 설정 완료)
 
 ### 1.3 폴더 구조 생성
 
-- [ ] 1.3.1 `components/` 폴더 생성
-- [ ] 1.3.2 `components/ui/` 폴더 생성
-- [ ] 1.3.3 `components/layout/` 폴더 생성
-- [ ] 1.3.4 `components/fees/` 폴더 생성
-- [ ] 1.3.5 `components/calculator/` 폴더 생성
-- [ ] 1.3.6 `components/search/` 폴더 생성
-- [ ] 1.3.7 `data/` 폴더 생성
-- [ ] 1.3.8 `lib/` 폴더 생성
-- [ ] 1.3.9 `hooks/` 폴더 생성
-- [ ] 1.3.10 `types/` 폴더 생성
+- [x] 1.3.1 `components/` 폴더 생성 ✅
+- [x] 1.3.2 `components/ui/` 폴더 생성 ✅
+- [x] 1.3.3 `components/layout/` 폴더 생성 ✅
+- [x] 1.3.4 `components/fees/` 폴더 생성 ✅
+- [x] 1.3.5 `components/calculator/` 폴더 생성 ✅
+- [x] 1.3.6 `components/search/` 폴더 생성 ✅
+- [x] 1.3.7 `data/` 폴더 생성 ✅
+- [x] 1.3.8 `lib/` 폴더 생성 ✅
+- [x] 1.3.9 `hooks/` 폴더 생성 ✅
+- [x] 1.3.10 `types/` 폴더 생성 ✅
 
 ---
 
@@ -61,14 +61,14 @@
 
 ### 2.1 TypeScript 타입 정의
 
-- [ ] 2.1.1 `types/index.ts` 파일 생성
-- [ ] 2.1.2 `Treatment` 인터페이스 정의 (시술 정보)
-- [ ] 2.1.3 `Price` 인터페이스 정의 (국산/수입 가격)
-- [ ] 2.1.4 `Category` 인터페이스 정의 (카테고리)
-- [ ] 2.1.5 `Aftercare` 인터페이스 정의 (사후 관리)
-- [ ] 2.1.6 `EmergencySign` 인터페이스 정의 (응급 징후)
-- [ ] 2.1.7 `QuizQuestion` 인터페이스 정의 (퀴즈)
-- [ ] 2.1.8 `CartItem` 인터페이스 정의 (계산기 장바구니)
+- [x] 2.1.1 `types/index.ts` 파일 생성 ✅
+- [x] 2.1.2 `Treatment` 인터페이스 정의 (시술 정보) ✅
+- [x] 2.1.3 `Price` 인터페이스 정의 (국산/수입 가격) ✅
+- [x] 2.1.4 `Category` 인터페이스 정의 (카테고리) ✅
+- [x] 2.1.5 `Aftercare` 인터페이스 정의 (사후 관리) ✅
+- [x] 2.1.6 `EmergencySign` 인터페이스 정의 (응급 징후) ✅
+- [x] 2.1.7 `QuizQuestion` 인터페이스 정의 (퀴즈) ✅
+- [x] 2.1.8 `CartItem` 인터페이스 정의 (계산기 장바구니) ✅
 
 ### 2.2 수가 데이터 입력 (fees.json)
 
