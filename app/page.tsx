@@ -1,166 +1,193 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
-import { Card, CardBody, CardHeader } from '@/components/ui/Card';
-import { CATEGORIES } from '@/lib/constants';
 
 export default function Home() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-24 pb-20">
       {/* Hero Section */}
-      <section className="text-center space-y-6 py-12">
-        <h1 className="text-5xl font-bold text-gray-900">
-          🏥 Derm Assistant AI
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          신입 피부과 직원을 위한 지능형 온보딩 플랫폼
-          <br />
-          복잡한 진료 수가와 시술 정보를 쉽게 학습하세요
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <Link href="/fees">
-            <Button size="large" variant="primary">
-              📊 수가 조회 시작하기
-            </Button>
-          </Link>
-          <Link href="/quiz">
-            <Button size="large" variant="outline">
-              📝 학습 퀴즈 풀기
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-tr from-blue-100/50 to-purple-100/50 rounded-full blur-3xl -z-10 animate-float" />
 
-      {/* Features Section */}
-      <section className="space-y-6">
-        <h2 className="text-3xl font-bold text-gray-900 text-center">
-          주요 기능
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card hover>
-            <CardHeader>
-              <h3 className="text-xl font-bold text-gray-900">
-                📊 수가 조회
-              </h3>
-            </CardHeader>
-            <CardBody>
-              <p className="text-gray-600">
-                보톡스, 필러, 리프팅, 스킨부스터 등 다양한 시술의 수가를 한눈에 확인하세요.
-                국산/수입 제품별 가격 비교도 가능합니다.
-              </p>
-            </CardBody>
-          </Card>
+        <div className="text-center space-y-8 max-w-4xl mx-auto px-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium animate-fade-in">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Derm Assistant AI v1.0
+          </div>
 
-          <Card hover>
-            <CardHeader>
-              <h3 className="text-xl font-bold text-gray-900">
-                🧮 비용 계산기
-              </h3>
-            </CardHeader>
-            <CardBody>
-              <p className="text-gray-600">
-                여러 시술을 조합하여 총 비용을 계산하고, 패키지 할인을 자동으로 적용받으세요.
-              </p>
-            </CardBody>
-          </Card>
+          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-[1.1] animate-slide-up">
+            피부과 실무의 모든 것,<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              AI 어시스턴트
+            </span>와 함께
+          </h1>
 
-          <Card hover>
-            <CardHeader>
-              <h3 className="text-xl font-bold text-gray-900">
-                📚 시술 가이드
-              </h3>
-            </CardHeader>
-            <CardBody>
-              <p className="text-gray-600">
-                각 시술의 특징, 효과, 주의사항, 사후 관리 방법을 상세하게 안내합니다.
-              </p>
-            </CardBody>
-          </Card>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
+            복잡한 수가표 암기부터 시술 후 주의사항 안내까지.<br className="hidden sm:block" />
+            신입 직원 교육을 위한 가장 스마트한 솔루션을 만나보세요.
+          </p>
 
-          <Card hover>
-            <CardHeader>
-              <h3 className="text-xl font-bold text-gray-900">
-                📝 학습 퀴즈
-              </h3>
-            </CardHeader>
-            <CardBody>
-              <p className="text-gray-600">
-                25개의 퀴즈 문제로 시술 지식을 테스트하고, 상세한 해설로 학습하세요.
-              </p>
-            </CardBody>
-          </Card>
-
-          <Card hover>
-            <CardHeader>
-              <h3 className="text-xl font-bold text-gray-900">
-                ⭐ 즐겨찾기
-              </h3>
-            </CardHeader>
-            <CardBody>
-              <p className="text-gray-600">
-                자주 찾는 시술을 즐겨찾기에 추가하여 빠르게 접근하세요.
-              </p>
-            </CardBody>
-          </Card>
-
-          <Card hover>
-            <CardHeader>
-              <h3 className="text-xl font-bold text-gray-900">
-                🎁 패키지 할인
-              </h3>
-            </CardHeader>
-            <CardBody>
-              <p className="text-gray-600">
-                동일 시술 3회 이상 선택 시 자동으로 패키지 할인이 적용됩니다.
-              </p>
-            </CardBody>
-          </Card>
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="space-y-6">
-        <h2 className="text-3xl font-bold text-gray-900 text-center">
-          시술 카테고리
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {CATEGORIES.map((category) => (
-            <Link key={category.id} href={`/fees?category=${category.id}`}>
-              <Card hover className="h-full">
-                <CardBody className="text-center space-y-2">
-                  <div className="text-4xl">{category.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {category.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {category.description}
-                  </p>
-                </CardBody>
-              </Card>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-slide-up delay-200">
+            <Link href="/fees" className="w-full sm:w-auto">
+              <Button size="xl" className="w-full sm:w-auto shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-shadow">
+                📊 수가 조회 시작하기
+              </Button>
             </Link>
-          ))}
+            <Link href="/quiz" className="w-full sm:w-auto">
+              <Button size="xl" variant="outline" className="w-full sm:w-auto bg-white/50 backdrop-blur-sm">
+                📝 실력 테스트하기
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid (Bento Style) */}
+      <section className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            실무에 필요한 모든 기능을<br />한곳에 모았습니다
+          </h2>
+          <p className="text-gray-600">
+            현직 실장님들의 피드백을 반영한 실무 밀착형 기능
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1: Large */}
+          <div className="md:col-span-2 relative group overflow-hidden rounded-3xl bg-white border border-gray-100 p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="text-9xl">📊</div>
+            </div>
+            <div className="relative z-10 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl">
+                📊
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">똑똑한 수가 조회</h3>
+              <p className="text-gray-600 max-w-md">
+                "보톡스 얼마예요?" 당황하지 마세요.<br />
+                시술명, 효과, 가격 정보를 검색 한 번으로 즉시 찾아드립니다.
+                국산/수입 여부부터 용량별 가격까지 완벽하게 정리되어 있습니다.
+              </p>
+              <div className="pt-4">
+                <Link href="/fees" className="text-blue-600 font-semibold hover:gap-2 transition-all inline-flex items-center gap-1">
+                  조회하러 가기 <span>→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Tall */}
+          <div className="md:row-span-2 relative group overflow-hidden rounded-3xl bg-white border border-gray-100 p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="absolute -bottom-8 -right-8 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="text-9xl">📝</div>
+            </div>
+            <div className="relative z-10 space-y-4 h-full flex flex-col">
+              <div className="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center text-2xl">
+                📝
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">맞춤형 학습 퀴즈</h3>
+              <p className="text-gray-600 flex-grow">
+                오늘 배운 내용을 퀴즈로 복습해보세요.
+                틀린 문제는 상세한 해설과 함께 다시 공부할 수 있습니다.
+              </p>
+              <div className="mt-auto pt-4 p-4 bg-purple-50 rounded-xl">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm font-semibold text-purple-900">나의 학습 현황</span>
+                  <span className="text-xs text-purple-700">Level 1</span>
+                </div>
+                <div className="w-full bg-purple-200 rounded-full h-2">
+                  <div className="bg-purple-500 h-2 rounded-full w-[0%] group-hover:w-[60%] transition-all duration-1000"></div>
+                </div>
+              </div>
+              <Link href="/quiz" className="text-purple-600 font-semibold hover:gap-2 transition-all inline-flex items-center gap-1 mt-4">
+                퀴즈 풀러 가기 <span>→</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 3: Normal */}
+          <div className="relative group overflow-hidden rounded-3xl bg-white border border-gray-100 p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="relative z-10 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center text-2xl">
+                🧮
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">비용 계산기</h3>
+              <p className="text-gray-600">
+                복잡한 패키지 할인 계산, 이제 실수 없이 정확하게 계산하세요.
+              </p>
+              <Link href="/calculator" className="text-green-600 font-semibold hover:gap-2 transition-all inline-flex items-center gap-1 mt-2">
+                계산하기 <span>→</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 4: Normal */}
+          <div className="relative group overflow-hidden rounded-3xl bg-white border border-gray-100 p-8 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="relative z-10 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl">
+                📚
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">시술 가이드</h3>
+              <p className="text-gray-600">
+                시술 후 주의사항, 부작용 대처법 등 필수 정보를 확인하세요.
+              </p>
+              <Link href="/guide" className="text-orange-600 font-semibold hover:gap-2 transition-all inline-flex items-center gap-1 mt-2">
+                확인하기 <span>→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="border-y border-gray-100 bg-gray-50/50">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-4xl font-bold text-gray-900">50+</div>
+              <div className="text-gray-600">등록된 시술</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-bold text-gray-900">25+</div>
+              <div className="text-gray-600">학습 퀴즈</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-bold text-gray-900">100%</div>
+              <div className="text-gray-600">무료 사용</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-bold text-gray-900">24/7</div>
+              <div className="text-gray-600">언제 어디서나</div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12 text-center text-white space-y-6">
-        <h2 className="text-3xl font-bold">
-          지금 바로 시작하세요!
-        </h2>
-        <p className="text-lg opacity-90 max-w-2xl mx-auto">
-          Derm Assistant AI와 함께 피부과 전문가로 성장하세요.
-          복잡한 수가 정보를 쉽고 빠르게 학습할 수 있습니다.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <Link href="/fees">
-            <Button size="large" variant="secondary">
-              📊 수가 조회하기
-            </Button>
-          </Link>
-          <Link href="/guide">
-            <Button size="large" variant="ghost" className="bg-white/20 hover:bg-white/30 text-white">
-              📚 가이드 보기
-            </Button>
-          </Link>
+      <section className="max-w-4xl mx-auto px-4 text-center pb-12">
+        <div className="rounded-3xl bg-gradient-to-r from-gray-900 to-gray-800 p-12 text-white relative overflow-hidden">
+          {/* Decorative Circles */}
+          <div className="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2 blur-2xl"></div>
+
+          <div className="relative z-10 space-y-6">
+            <h2 className="text-3xl font-bold">지금 바로 시작해보세요</h2>
+            <p className="text-gray-300 max-w-xl mx-auto">
+              Derm Assistant AI와 함께라면<br />
+              더 이상 어려운 시술 용어와 복잡한 계산 때문에 고민할 필요가 없습니다.
+            </p>
+            <div className="pt-4">
+              <Link href="/fees">
+                <Button variant="secondary" size="large" className="bg-white text-gray-900 hover:bg-gray-100 border-none shadow-xl">
+                  무료로 시작하기
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

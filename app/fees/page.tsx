@@ -43,8 +43,8 @@ export default function FeesPage() {
         // Search filter
         if (searchQuery) {
             filtered = filtered.filter((treatment) => {
-                const searchText = `${treatment.name} ${treatment.description || ''} ${treatment.prices.domestic?.product || ''
-                    } ${treatment.prices.imported?.product || ''}`.toLowerCase();
+                const searchText = `${treatment.name} ${treatment.description || ''} ${treatment.prices?.domestic?.product || ''
+                    } ${treatment.prices?.imported?.product || ''} ${treatment.prices?.single?.product || ''}`.toLowerCase();
                 return searchText.includes(searchQuery.toLowerCase());
             });
         }
@@ -57,7 +57,7 @@ export default function FeesPage() {
         // Price range filter
         if (selectedPriceRange !== 'all') {
             filtered = filtered.filter((treatment) => {
-                const price = treatment.prices.domestic?.price || treatment.prices.imported?.price || 0;
+                const price = treatment.prices?.domestic?.price || treatment.prices?.imported?.price || treatment.prices?.single?.price || 0;
                 return matchesPriceRange(price, selectedPriceRange as any);
             });
         }
@@ -66,9 +66,9 @@ export default function FeesPage() {
         if (selectedProductType !== 'all') {
             filtered = filtered.filter((treatment) => {
                 if (selectedProductType === 'domestic') {
-                    return treatment.prices.domestic !== undefined;
+                    return treatment.prices?.domestic !== undefined;
                 } else if (selectedProductType === 'imported') {
-                    return treatment.prices.imported !== undefined;
+                    return treatment.prices?.imported !== undefined;
                 }
                 return true;
             });
@@ -82,13 +82,13 @@ export default function FeesPage() {
                 case 'name-desc':
                     return b.name.localeCompare(a.name, 'ko');
                 case 'price-asc': {
-                    const priceA = a.prices.domestic?.price || a.prices.imported?.price || 0;
-                    const priceB = b.prices.domestic?.price || b.prices.imported?.price || 0;
+                    const priceA = a.prices?.domestic?.price || a.prices?.imported?.price || a.prices?.single?.price || 0;
+                    const priceB = b.prices?.domestic?.price || b.prices?.imported?.price || b.prices?.single?.price || 0;
                     return priceA - priceB;
                 }
                 case 'price-desc': {
-                    const priceA = a.prices.domestic?.price || a.prices.imported?.price || 0;
-                    const priceB = b.prices.domestic?.price || b.prices.imported?.price || 0;
+                    const priceA = a.prices?.domestic?.price || a.prices?.imported?.price || a.prices?.single?.price || 0;
+                    const priceB = b.prices?.domestic?.price || b.prices?.imported?.price || b.prices?.single?.price || 0;
                     return priceB - priceA;
                 }
                 default:
@@ -195,7 +195,7 @@ export default function FeesPage() {
                         <div>
                             <h3 className="font-semibold text-gray-900 mb-3">가격 정보</h3>
                             <div className="space-y-3">
-                                {selectedTreatment.prices.domestic && (
+                                {selectedTreatment.prices?.domestic && (
                                     <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
                                         <div>
                                             <Badge variant="domestic" size="small" className="mb-1">
@@ -210,7 +210,7 @@ export default function FeesPage() {
                                         </p>
                                     </div>
                                 )}
-                                {selectedTreatment.prices.imported && (
+                                {selectedTreatment.prices?.imported && (
                                     <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
                                         <div>
                                             <Badge variant="imported" size="small" className="mb-1">
@@ -223,6 +223,26 @@ export default function FeesPage() {
                                         <p className="text-xl font-bold text-gray-900">
                                             {formatPrice(selectedTreatment.prices.imported.price)}
                                         </p>
+                                    </div>
+                                )}
+                                {selectedTreatment.prices?.single && (
+                                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                        <div>
+                                            <Badge variant="info" size="small" className="mb-1">
+                                                단일가
+                                            </Badge>
+                                            <p className="text-sm text-gray-600">
+                                                {selectedTreatment.prices.single.product}
+                                            </p>
+                                        </div>
+                                        <p className="text-xl font-bold text-gray-900">
+                                            {formatPrice(selectedTreatment.prices.single.price)}
+                                        </p>
+                                    </div>
+                                )}
+                                {!selectedTreatment.prices && (
+                                    <div className="text-center p-4 bg-gray-50 rounded-lg text-gray-500 italic">
+                                        가격 정보가 없습니다. 데스크에 문의해주세요.
                                     </div>
                                 )}
                             </div>

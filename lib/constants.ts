@@ -104,6 +104,17 @@ export const NAV_ITEMS = [
 ] as const;
 
 // ============================================
+// LocalStorage 키
+// ============================================
+
+export const STORAGE_KEYS = {
+    FAVORITES: "derm-assistant-favorites",
+    CART: "derm-assistant-cart",
+    CALCULATOR_CART: "derm-assistant-calculator-cart",
+    QUIZ_PROGRESS: "derm-assistant-quiz-progress",
+} as const;
+
+// ============================================
 // 색상 팔레트
 // ============================================
 
@@ -144,16 +155,6 @@ export const COLORS = {
         800: "#78350f",
         900: "#451a03",
     },
-} as const;
-
-// ============================================
-// LocalStorage 키
-// ============================================
-
-export const STORAGE_KEYS = {
-    FAVORITES: "derm-assistant-favorites",
-    CART: "derm-assistant-cart",
-    QUIZ_PROGRESS: "derm-assistant-quiz-progress",
 } as const;
 
 // ============================================

@@ -225,7 +225,7 @@ export default function CalculatorPage() {
                             <div key={treatment.id} className="relative">
                                 <TreatmentCard treatment={treatment} />
                                 <div className="absolute bottom-4 right-4 flex gap-2">
-                                    {treatment.prices.domestic && (
+                                    {treatment.prices?.domestic && (
                                         <Button
                                             size="small"
                                             onClick={() => handleAddToCart(treatment, 'domestic')}
@@ -233,7 +233,7 @@ export default function CalculatorPage() {
                                             국산 추가
                                         </Button>
                                     )}
-                                    {treatment.prices.imported && (
+                                    {treatment.prices?.imported && (
                                         <Button
                                             size="small"
                                             variant="secondary"

@@ -24,7 +24,18 @@ export default function QuizPage() {
         completed: false,
     });
     const [showResult, setShowResult] = useState(false);
-    const [questions, setQuestions] = useState(quizData.questions);
+
+    // Flatten all questions from categories
+    const allQuestions = React.useMemo(() => {
+        return quizData.categories.flatMap((category) =>
+            category.questions.map(q => ({
+                ...q,
+                category: category.name
+            }))
+        );
+    }, []);
+
+    const [questions, setQuestions] = useState(allQuestions);
 
     // Load progress from localStorage
     useEffect(() => {
@@ -82,7 +93,7 @@ export default function QuizPage() {
         });
         setShowResult(false);
         // Shuffle questions
-        setQuestions(shuffleArray([...quizData.questions]));
+        setQuestions(shuffleArray([...allQuestions]));
     };
 
     if (quizProgress.completed) {

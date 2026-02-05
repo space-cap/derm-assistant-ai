@@ -19,8 +19,8 @@ const CATEGORY_OPTIONS: SelectOption[] = [
 export default function GuidePage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
 
-    const filteredGuides = aftercareData.aftercare_guides.filter(
-        (guide) => selectedCategory === 'all' || guide.category === selectedCategory
+    const filteredGuides = aftercareData.treatments.filter(
+        (guide) => selectedCategory === 'all' || guide.id === selectedCategory
     );
 
     return (
@@ -93,12 +93,15 @@ export default function GuidePage() {
                     {filteredGuides.map((guide) => (
                         <AfterCareGuide
                             key={guide.id}
-                            category={guide.category}
-                            title={guide.title}
-                            icon={guide.icon}
-                            dos={guide.dos}
-                            donts={guide.donts}
-                            timeline={guide.timeline}
+                            category={guide.name}
+                            title={guide.name}
+                            icon="📋"
+                            dos={guide.precautions || []}
+                            donts={aftercareData.common_precautions}
+                            timeline={guide.red_flags ? guide.red_flags.map((flag, idx) => ({
+                                period: `주의사항 ${idx + 1}`,
+                                care: flag
+                            })) : []}
                         />
                     ))}
                 </div>

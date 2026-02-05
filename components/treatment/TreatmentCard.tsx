@@ -7,12 +7,16 @@ interface Treatment {
     id: string;
     name: string;
     category: string;
-    prices: {
+    prices?: {
         domestic?: {
             price: number;
             product: string;
         };
         imported?: {
+            price: number;
+            product: string;
+        };
+        single?: {
             price: number;
             product: string;
         };
@@ -35,8 +39,9 @@ export const TreatmentCard: React.FC<TreatmentCardProps> = ({
     treatment,
     onClick,
 }) => {
-    const hasDomestic = treatment.prices.domestic;
-    const hasImported = treatment.prices.imported;
+    const hasDomestic = treatment.prices?.domestic;
+    const hasImported = treatment.prices?.imported;
+    const hasSingle = treatment.prices?.single;
 
     return (
         <Card hover onClick={onClick} className="h-full cursor-pointer">
@@ -59,38 +64,62 @@ export const TreatmentCard: React.FC<TreatmentCardProps> = ({
                 )}
 
                 {/* Prices */}
-                <div className="space-y-2">
-                    {hasDomestic && (
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                                <Badge variant="domestic" size="small">
-                                    국산
-                                </Badge>
-                                <span className="text-xs text-gray-500">
-                                    {treatment.prices.domestic!.product}
+                {treatment.prices && (
+                    <div className="space-y-2">
+                        {hasDomestic && (
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                    <Badge variant="domestic" size="small">
+                                        국산
+                                    </Badge>
+                                    <span className="text-xs text-gray-500">
+                                        {treatment.prices.domestic!.product}
+                                    </span>
+                                </div>
+                                <span className="font-semibold text-gray-900">
+                                    {formatPrice(treatment.prices.domestic!.price)}
                                 </span>
                             </div>
-                            <span className="font-semibold text-gray-900">
-                                {formatPrice(treatment.prices.domestic!.price)}
-                            </span>
-                        </div>
-                    )}
-                    {hasImported && (
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                                <Badge variant="imported" size="small">
-                                    수입
-                                </Badge>
-                                <span className="text-xs text-gray-500">
-                                    {treatment.prices.imported!.product}
+                        )}
+                        {hasImported && (
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                    <Badge variant="imported" size="small">
+                                        수입
+                                    </Badge>
+                                    <span className="text-xs text-gray-500">
+                                        {treatment.prices.imported!.product}
+                                    </span>
+                                </div>
+                                <span className="font-semibold text-gray-900">
+                                    {formatPrice(treatment.prices.imported!.price)}
                                 </span>
                             </div>
-                            <span className="font-semibold text-gray-900">
-                                {formatPrice(treatment.prices.imported!.price)}
-                            </span>
-                        </div>
-                    )}
-                </div>
+                        )}
+                        {hasSingle && (
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                    <Badge variant="info" size="small">
+                                        단일가
+                                    </Badge>
+                                    <span className="text-xs text-gray-500">
+                                        {treatment.prices.single!.product}
+                                    </span>
+                                </div>
+                                <span className="font-semibold text-gray-900">
+                                    {formatPrice(treatment.prices.single!.price)}
+                                </span>
+                            </div>
+                        )}
+                    </div>
+                )}
+
+                {/* No price available */}
+                {!treatment.prices && (
+                    <div className="text-sm text-gray-500 italic">
+                        💬 상담 필요
+                    </div>
+                )}
 
                 {/* Additional Info */}
                 <div className="pt-3 border-t border-gray-100 space-y-1">
