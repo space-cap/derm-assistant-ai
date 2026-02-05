@@ -1,0 +1,858 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2026-02-05",
+        "currency": "KRW",
+        "description": "피부과 신입 직원 온보딩 및 상담용 지능형 수가 데이터베이스"
+    },
+    "categories": [
+        {
+            "id": "botox",
+            "name": "보톡스",
+            "icon": "💉",
+            "treatments": [
+                {
+                    "id": "botox-wrinkle-forehead",
+                    "name": "이마 보톡스",
+                    "category": "주름 보톡스",
+                    "areas": [
+                        "이마"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 80000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 130000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "이마 주름 개선",
+                    "duration": "5-10분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1~2주 후",
+                    "notes": "이마 부위는 국산 8만원 / 수입 13만원 별도 구성 가능"
+                },
+                {
+                    "id": "botox-wrinkle-glabella",
+                    "name": "미간 보톡스",
+                    "category": "주름 보톡스",
+                    "areas": [
+                        "미간"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 50000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 100000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "미간 주름 개선",
+                    "duration": "5-10분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1~2주 후"
+                },
+                {
+                    "id": "botox-wrinkle-eyes",
+                    "name": "눈가 보톡스",
+                    "category": "주름 보톡스",
+                    "areas": [
+                        "눈가"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 50000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 100000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "눈가 주름(까마귀발) 개선",
+                    "duration": "5-10분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1~2주 후"
+                },
+                {
+                    "id": "botox-jaw",
+                    "name": "사각턱 보톡스",
+                    "category": "사각턱 보톡스",
+                    "prices": {
+                        "domestic": {
+                            "price": 100000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 150000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "사각턱 축소",
+                    "duration": "5-10분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1개월 후"
+                },
+                {
+                    "id": "botox-tmj",
+                    "name": "턱관절 보톡스",
+                    "category": "사각턱 보톡스",
+                    "prices": {
+                        "domestic": {
+                            "price": 150000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 200000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "턱관절 통증 완화",
+                    "duration": "5-10분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1개월 후"
+                },
+                {
+                    "id": "botox-bruxism",
+                    "name": "이갈이 보톡스",
+                    "category": "사각턱 보톡스",
+                    "description": "턱+턱관절 복합 시술",
+                    "unit": "1회",
+                    "notes": "상담 필요",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1개월 후"
+                },
+                {
+                    "id": "botox-trapezius",
+                    "name": "승모근 보톡스",
+                    "category": "바디 보톡스",
+                    "areas": [
+                        "승모근"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 150000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 200000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "100unit",
+                    "description": "승모근 축소",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1개월 후"
+                },
+                {
+                    "id": "botox-calf",
+                    "name": "종아리 보톡스",
+                    "category": "바디 보톡스",
+                    "areas": [
+                        "종아리"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 150000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 200000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "100unit",
+                    "description": "종아리 축소",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                    "effect_start": "1개월 후"
+                },
+                {
+                    "id": "botox-salivary",
+                    "name": "침샘 보톡스",
+                    "category": "특수 부위 보톡스",
+                    "areas": [
+                        "침샘"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 300000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 400000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "침샘 축소",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취"
+                },
+                {
+                    "id": "botox-temporal",
+                    "name": "측두 보톡스",
+                    "category": "특수 부위 보톡스",
+                    "areas": [
+                        "측두"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 300000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 400000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "측두근 축소",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취"
+                },
+                {
+                    "id": "botox-cheekbone",
+                    "name": "광대 보톡스",
+                    "category": "특수 부위 보톡스",
+                    "areas": [
+                        "광대"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 300000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 400000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "광대 축소",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취"
+                },
+                {
+                    "id": "botox-hyperhidrosis",
+                    "name": "다한증 보톡스",
+                    "category": "특수 부위 보톡스",
+                    "areas": [
+                        "다한증"
+                    ],
+                    "prices": {
+                        "domestic": {
+                            "price": 300000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 400000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "땀 분비 억제",
+                    "duration": "15-20분",
+                    "pain_level": 2,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "아이스 마취 혹은 필요 시 연고 마취"
+                },
+                {
+                    "id": "botox-skin-airtoxin",
+                    "name": "에어톡신",
+                    "category": "스킨 보톡스",
+                    "prices": {
+                        "domestic": {
+                            "price": 100000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 150000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "피부 표면 개선",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                },
+                {
+                    "id": "botox-skin-pore",
+                    "name": "모공 보톡스",
+                    "category": "스킨 보톡스",
+                    "prices": {
+                        "domestic": {
+                            "price": 150000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 200000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "모공 축소",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                },
+                {
+                    "id": "botox-skin-jawline",
+                    "name": "턱라인 보톡스",
+                    "category": "스킨 보톡스",
+                    "prices": {
+                        "domestic": {
+                            "price": 200000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 250000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "턱라인 정리",
+                    "duration": "10-15분",
+                    "pain_level": 1,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                },
+                {
+                    "id": "botox-skin-fullface",
+                    "name": "얼굴 전체 보톡스",
+                    "category": "스킨 보톡스",
+                    "prices": {
+                        "domestic": {
+                            "price": 300000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 400000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "얼굴 전체 피부 개선",
+                    "duration": "15-20분",
+                    "pain_level": 1,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                },
+                {
+                    "id": "botox-skin-face-neck",
+                    "name": "얼굴+목 보톡스",
+                    "category": "스킨 보톡스",
+                    "prices": {
+                        "domestic": {
+                            "price": 400000,
+                            "product": "국산 보톡스"
+                        },
+                        "imported": {
+                            "price": 500000,
+                            "product": "수입 보톡스"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "얼굴+목 피부 개선 패키지",
+                    "duration": "20-25분",
+                    "pain_level": 1,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                }
+            ]
+        },
+        {
+            "id": "filler",
+            "name": "필러",
+            "icon": "💧",
+            "treatments": [
+                {
+                    "id": "filler-domestic",
+                    "name": "국산 필러 (이니티움)",
+                    "category": "필러",
+                    "prices": {
+                        "domestic": {
+                            "price": 200000,
+                            "product": "이니티움"
+                        }
+                    },
+                    "unit": "1cc",
+                    "description": "국산 히알루론산 필러",
+                    "duration": "10-20분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "국소 마취(리도카인 포함 제품) 및 연고 마취"
+                },
+                {
+                    "id": "filler-imported",
+                    "name": "수입 필러 (벨로테로)",
+                    "category": "필러",
+                    "prices": {
+                        "imported": {
+                            "price": 500000,
+                            "product": "벨로테로"
+                        }
+                    },
+                    "unit": "1cc",
+                    "description": "수입 히알루론산 필러",
+                    "duration": "10-20분",
+                    "pain_level": 1,
+                    "downtime": "멍/붓기 1주 내외",
+                    "anesthesia": "국소 마취(리도카인 포함 제품) 및 연고 마취"
+                },
+                {
+                    "id": "filler-ellanse-1y",
+                    "name": "엘란쎄 (1년 유지)",
+                    "category": "필러",
+                    "description": "PCL 재생필러 - 1년 유지형",
+                    "prices": {
+                        "imported": {
+                            "price": 450000,
+                            "product": "엘란쎄 S"
+                        }
+                    },
+                    "unit": "1cc",
+                    "duration": "15-25분",
+                    "pain_level": 2,
+                    "downtime": "멍/붓기 1-2주",
+                    "anesthesia": "국소 마취 및 연고 마취"
+                },
+                {
+                    "id": "filler-ellanse-2y",
+                    "name": "엘란쎄 (2년 유지)",
+                    "category": "필러",
+                    "description": "PCL 재생필러 - 2년 유지형",
+                    "prices": {
+                        "imported": {
+                            "price": 500000,
+                            "product": "엘란쎄 M"
+                        }
+                    },
+                    "unit": "1cc",
+                    "duration": "15-25분",
+                    "pain_level": 2,
+                    "downtime": "멍/붓기 1-2주",
+                    "anesthesia": "국소 마취 및 연고 마취"
+                }
+            ]
+        },
+        {
+            "id": "skinbooster",
+            "name": "스킨부스터",
+            "icon": "✨",
+            "treatments": [
+                {
+                    "id": "rejuran-healer",
+                    "name": "리쥬란 힐러",
+                    "category": "스킨부스터",
+                    "prices": {
+                        "single": {
+                            "price": 400000,
+                            "product": "리쥬란 힐러"
+                        }
+                    },
+                    "unit": "2cc",
+                    "description": "연어 DNA(PN) 성분 피부 재생",
+                    "duration": "10-20분",
+                    "pain_level": 4,
+                    "downtime": "엠보싱 1-3일",
+                    "anesthesia": "연고 마취",
+                    "notes": "3회 패키지 110만원"
+                },
+                {
+                    "id": "juvelook",
+                    "name": "쥬베룩",
+                    "category": "스킨부스터",
+                    "prices": {
+                        "single": {
+                            "price": 700000,
+                            "product": "쥬베룩"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "PDLLA+HA 복합 부스터",
+                    "duration": "15-25분",
+                    "pain_level": 3,
+                    "downtime": "붉은기 1-2일",
+                    "anesthesia": "연고 마취",
+                    "notes": "3회 패키지 180만원"
+                },
+                {
+                    "id": "exosome",
+                    "name": "엑소좀",
+                    "category": "스킨부스터",
+                    "prices": {
+                        "single": {
+                            "price": 700000,
+                            "product": "엑소좀"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "줄기세포 유래 전달체",
+                    "duration": "15-25분",
+                    "pain_level": 2,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "연고 마취 혹은 불필요",
+                    "notes": "3회 패키지 180만원"
+                },
+                {
+                    "id": "ultracol",
+                    "name": "울트라콜",
+                    "category": "스킨부스터",
+                    "prices": {
+                        "single": {
+                            "price": 700000,
+                            "product": "울트라콜"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "PDO 성분 리퀴드 리프팅",
+                    "duration": "15-25분",
+                    "pain_level": 2,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "연고 마취 혹은 불필요"
+                },
+                {
+                    "id": "refileo",
+                    "name": "레필레오 (셀럽주사)",
+                    "category": "스킨부스터",
+                    "prices": {
+                        "single": {
+                            "price": 500000,
+                            "product": "레필레오"
+                        }
+                    },
+                    "unit": "3cc",
+                    "description": "줄기세포 배양액 + 고순도 HA(J-Complex)",
+                    "duration": "10-20분",
+                    "pain_level": 1,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요",
+                    "notes": "3회 패키지 120만원"
+                },
+                {
+                    "id": "jalupro",
+                    "name": "잘루프로 (밀라노주사)",
+                    "category": "스킨부스터",
+                    "prices": {
+                        "single": {
+                            "price": 700000,
+                            "product": "잘루프로"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "아미노산 복합 부스터",
+                    "duration": "10-20분",
+                    "pain_level": 1,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요",
+                    "notes": "3회 패키지 180만원"
+                },
+                {
+                    "id": "eye-rejuran",
+                    "name": "아이리쥬란",
+                    "category": "스킨부스터",
+                    "prices": {
+                        "single": {
+                            "price": 250000,
+                            "product": "아이리쥬란"
+                        }
+                    },
+                    "unit": "1cc",
+                    "description": "눈가 전용 리쥬란",
+                    "duration": "10-15분",
+                    "pain_level": 3,
+                    "downtime": "엠보싱 1-3일",
+                    "anesthesia": "연고 마취",
+                    "notes": "3회 패키지 65만원"
+                }
+            ]
+        },
+        {
+            "id": "lifting",
+            "name": "리프팅",
+            "icon": "📈",
+            "treatments": [
+                {
+                    "id": "ulthera-300",
+                    "name": "울쎄라 300샷",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "HIFU",
+                    "prices": {
+                        "imported": {
+                            "price": 1200000,
+                            "product": "울쎄라",
+                            "price_per_shot": 4000
+                        }
+                    },
+                    "unit": "300샷",
+                    "description": "HIFU 리프팅",
+                    "duration": "40-60분",
+                    "pain_level": 4,
+                    "downtime": "즉시 생활 가능, 붓기 1~2주",
+                    "anesthesia": "연고 마취 (30~40분)",
+                    "maintenance": "6개월~1년 간격",
+                    "notes": "시술 후 3일간 미온수 세안 권장, 차가운 팩 지양"
+                },
+                {
+                    "id": "ulthera-600",
+                    "name": "울쎄라 600샷",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "HIFU",
+                    "prices": {
+                        "imported": {
+                            "price": 2000000,
+                            "product": "울쎄라",
+                            "price_per_shot": 3333
+                        }
+                    },
+                    "unit": "600샷",
+                    "description": "HIFU 리프팅 (권장)",
+                    "duration": "60-90분",
+                    "pain_level": 4,
+                    "downtime": "즉시 생활 가능, 붓기 1~2주",
+                    "anesthesia": "연고 마취 (30~40분)",
+                    "maintenance": "6개월~1년 간격",
+                    "notes": "시술 후 3일간 미온수 세안 권장, 차가운 팩 지양"
+                },
+                {
+                    "id": "thermage-300",
+                    "name": "써마지 FLX 300샷",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "RF",
+                    "prices": {
+                        "imported": {
+                            "price": 1500000,
+                            "product": "써마지 FLX",
+                            "price_per_shot": 5000
+                        }
+                    },
+                    "unit": "300샷",
+                    "description": "RF 리프팅",
+                    "duration": "40-60분",
+                    "pain_level": 4,
+                    "downtime": "즉시 생활 가능, 붓기 1~2주",
+                    "anesthesia": "연고 마취 (30~40분)",
+                    "maintenance": "6개월~1년 간격",
+                    "notes": "시술 후 3일간 미온수 세안 권장, 차가운 팩 지양"
+                },
+                {
+                    "id": "thermage-600",
+                    "name": "써마지 FLX 600샷",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "RF",
+                    "prices": {
+                        "imported": {
+                            "price": 2500000,
+                            "product": "써마지 FLX",
+                            "price_per_shot": 4166
+                        }
+                    },
+                    "unit": "600샷",
+                    "description": "RF 리프팅 (권장)",
+                    "duration": "60-90분",
+                    "pain_level": 4,
+                    "downtime": "즉시 생활 가능, 붓기 1~2주",
+                    "anesthesia": "연고 마취 (30~40분)",
+                    "maintenance": "6개월~1년 간격",
+                    "notes": "시술 후 3일간 미온수 세안 권장, 차가운 팩 지양"
+                },
+                {
+                    "id": "shrink-300",
+                    "name": "슈링크 유니버스 300샷",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "HIFU (국산)",
+                    "prices": {
+                        "domestic": {
+                            "price": 270000,
+                            "product": "슈링크 유니버스",
+                            "price_per_shot": 900
+                        }
+                    },
+                    "unit": "300샷",
+                    "description": "국산 HIFU 리프팅",
+                    "duration": "30-40분",
+                    "pain_level": 3,
+                    "downtime": "즉시 생활 가능, 붓기 1주 내외",
+                    "anesthesia": "연고 마취",
+                    "maintenance": "1~3개월 간격"
+                },
+                {
+                    "id": "shrink-400",
+                    "name": "슈링크 유니버스 400샷",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "HIFU (국산)",
+                    "prices": {
+                        "domestic": {
+                            "price": 360000,
+                            "product": "슈링크 유니버스",
+                            "price_per_shot": 900
+                        }
+                    },
+                    "unit": "400샷",
+                    "description": "국산 HIFU 리프팅",
+                    "duration": "40-50분",
+                    "pain_level": 3,
+                    "downtime": "즉시 생활 가능, 붓기 1주 내외",
+                    "anesthesia": "연고 마취",
+                    "maintenance": "1~3개월 간격"
+                },
+                {
+                    "id": "tuneface-20kj",
+                    "name": "튠페이스 20KJ",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "고주파",
+                    "prices": {
+                        "imported": {
+                            "price": 500000,
+                            "product": "튠페이스"
+                        }
+                    },
+                    "unit": "20KJ",
+                    "description": "고주파 리프팅",
+                    "duration": "20-30분",
+                    "pain_level": 2,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                },
+                {
+                    "id": "tuneface-30kj",
+                    "name": "튠페이스 30KJ",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "고주파",
+                    "prices": {
+                        "imported": {
+                            "price": 1000000,
+                            "product": "튠페이스"
+                        }
+                    },
+                    "unit": "30KJ",
+                    "description": "고주파 리프팅",
+                    "duration": "30-40분",
+                    "pain_level": 2,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                },
+                {
+                    "id": "tuneface-60kj",
+                    "name": "튠페이스 60KJ",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "고주파",
+                    "prices": {
+                        "imported": {
+                            "price": 1800000,
+                            "product": "튠페이스"
+                        }
+                    },
+                    "unit": "60KJ",
+                    "description": "고주파 리프팅 (권장)",
+                    "duration": "40-60분",
+                    "pain_level": 2,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                },
+                {
+                    "id": "fasela",
+                    "name": "파셀라",
+                    "category": "리프팅 레이저 (EBD)",
+                    "type": "근막리프팅",
+                    "prices": {
+                        "imported": {
+                            "price": 500000,
+                            "product": "파셀라"
+                        }
+                    },
+                    "unit": "1회",
+                    "description": "심부 근막층(Fascia) 타겟, 유착된 근막 재배열 및 림프 순환 촉진",
+                    "duration": "20분",
+                    "pain_level": 2,
+                    "downtime": "즉시 생활 가능",
+                    "anesthesia": "불필요"
+                }
+            ]
+        }
+    ],
+    "special_packages": [
+        {
+            "id": "eye-package",
+            "name": "아이 패키지",
+            "target": "눈밑/눈가",
+            "composition": [
+                "튠아이 20K",
+                "아이슈링크 200샷",
+                "눈가 보톡스"
+            ],
+            "original_price": 590000,
+            "event_price": 390000,
+            "discount_rate": 33.9,
+            "recommendation": "눈밑 꺼짐이 심한 경우 잘루프로 업셀링 권장"
+        },
+        {
+            "id": "alfit-package",
+            "name": "알핏 주사 패키지",
+            "composition": [
+                "종아리 보톡스 200U",
+                "라인핏 1회",
+                "셀룰라이트 토닝 1회"
+            ],
+            "price": 490000
+        },
+        {
+            "id": "lipofit-package",
+            "name": "리포핏 패키지",
+            "sessions": 3,
+            "details": {
+                "session_1": "튠바디 30분 + 보톡스 + 라인핏",
+                "session_2": "라인핏 + 리터치",
+                "session_3": "라인핏"
+            },
+            "price": 990000
+        },
+        {
+            "id": "rejuran-3pack",
+            "name": "리쥬란 3회 패키지",
+            "composition": [
+                "리쥬란 힐러 2cc × 3회"
+            ],
+            "original_price": 1200000,
+            "package_price": 1100000,
+            "discount_rate": 8.3
+        }
+    ]
+}

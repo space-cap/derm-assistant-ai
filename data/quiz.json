@@ -1,0 +1,378 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2026-02-05",
+        "description": "신입 직원 학습용 퀴즈 데이터베이스",
+        "total_questions": 25
+    },
+    "categories": [
+        {
+            "id": "botox",
+            "name": "보톡스",
+            "questions": [
+                {
+                    "id": "botox-q1",
+                    "question": "이마 보톡스 시술 후 환자가 지켜야 할 주의사항으로 옳은 것은?",
+                    "options": [
+                        "시술 후 즉시 눕는 것이 좋다",
+                        "시술 후 4시간 동안 눕지 않는다",
+                        "시술 후 바로 사우나에 가도 된다",
+                        "시술 부위를 강하게 마사지한다"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "보톡스 시술 후 4시간 동안은 눕지 않아야 약물이 다른 부위로 퍼지는 것을 방지할 수 있습니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "botox-q2",
+                    "question": "사각턱 보톡스의 효과가 나타나는 시기는?",
+                    "options": [
+                        "시술 직후",
+                        "1~2주 후",
+                        "1개월 후",
+                        "3개월 후"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "사각턱 보톡스는 바디 보톡스로 분류되며, 효과는 약 1개월 후부터 나타나기 시작합니다. 표정 주름 보톡스는 1~2주 후 효과가 나타납니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "botox-q3",
+                    "question": "국산 보톡스와 수입 보톡스의 주요 차이점은?",
+                    "options": [
+                        "효과 지속 기간이 다르다",
+                        "가격과 브랜드 인지도가 다르다",
+                        "시술 방법이 완전히 다르다",
+                        "부작용 발생률이 크게 다르다"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "국산과 수입 보톡스의 주요 차이는 가격과 브랜드 인지도입니다. 효과와 안전성은 유사하나, 수입 제품이 더 높은 가격대를 형성합니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "botox-q4",
+                    "question": "다한증 보톡스의 통증 레벨은?",
+                    "options": [
+                        "1 (거의 없음)",
+                        "2 (약간 따끔)",
+                        "3 (중간)",
+                        "4 (상)"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "다한증 보톡스는 통증 레벨 2로, 약간의 따끔거림이 있을 수 있습니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "botox-q5",
+                    "question": "스킨 보톡스의 특징으로 옳지 않은 것은?",
+                    "options": [
+                        "피부 표면 개선 효과가 있다",
+                        "마취가 필요 없다",
+                        "즉시 생활이 가능하다",
+                        "효과가 1년 이상 지속된다"
+                    ],
+                    "correct_answer": 3,
+                    "explanation": "스킨 보톡스의 효과는 일반 보톡스와 마찬가지로 3-6개월 정도 지속되며, 1년 이상 지속되지 않습니다.",
+                    "difficulty": "hard"
+                }
+            ]
+        },
+        {
+            "id": "filler",
+            "name": "필러",
+            "questions": [
+                {
+                    "id": "filler-q1",
+                    "question": "필러 시술 후 가장 주의해야 할 응급 징후는?",
+                    "options": [
+                        "약간의 붓기",
+                        "시술 부위가 점점 검게 변함",
+                        "가벼운 멍",
+                        "약간의 따끔거림"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "시술 부위가 검게 변하는 것은 혈관 폐쇄의 징후로, 골든타임 6시간 이내에 즉시 원장에게 보고하고 환자를 내원시켜야 합니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "filler-q2",
+                    "question": "필러 시술 후 경락 마사지를 금지해야 하는 기간은?",
+                    "options": [
+                        "3일",
+                        "1주일",
+                        "2주일",
+                        "1개월"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "필러 시술 후 2주간은 강한 압력과 경락 마사지를 금지해야 필러가 이동하거나 변형되는 것을 방지할 수 있습니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "filler-q3",
+                    "question": "엘란쎄의 주성분은?",
+                    "options": [
+                        "히알루론산 (HA)",
+                        "폴리카프로락톤 (PCL)",
+                        "연어 DNA (PN)",
+                        "PDLLA"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "엘란쎄는 PCL(폴리카프로락톤) 성분의 재생필러로, 콜라겐 생성을 촉진하여 장기 지속 효과를 제공합니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "filler-q4",
+                    "question": "국산 필러(이니티움) 1cc의 가격은?",
+                    "options": [
+                        "10만원",
+                        "20만원",
+                        "30만원",
+                        "50만원"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "국산 필러(이니티움)는 1cc당 20만원입니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "filler-q5",
+                    "question": "필러 시술 시 사용되는 마취 방법은?",
+                    "options": [
+                        "전신 마취",
+                        "국소 마취 및 연고 마취",
+                        "마취 불필요",
+                        "수면 마취"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "필러 시술 시에는 리도카인이 포함된 제품을 사용하거나 연고 마취를 병행합니다.",
+                    "difficulty": "easy"
+                }
+            ]
+        },
+        {
+            "id": "skinbooster",
+            "name": "스킨부스터",
+            "questions": [
+                {
+                    "id": "skinbooster-q1",
+                    "question": "리쥬란 힐러의 주성분은?",
+                    "options": [
+                        "히알루론산 (HA)",
+                        "연어 DNA (PN)",
+                        "PDLLA",
+                        "PCL"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "리쥬란 힐러는 연어 DNA 유래 PN(폴리뉴클레오타이드) 성분으로, 피부 재생과 장벽 강화에 효과적입니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "skinbooster-q2",
+                    "question": "리쥬란 힐러 시술 후 나타나는 엠보싱(돌기)은 언제 소실되나요?",
+                    "options": [
+                        "시술 직후",
+                        "1-3일",
+                        "1주일",
+                        "2주일"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "리쥬란 힐러 시술 후 나타나는 엠보싱은 1-3일 내에 자연스럽게 소실됩니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "skinbooster-q3",
+                    "question": "쥬베룩의 주성분인 PDLLA와 PLLA의 차이점은?",
+                    "options": [
+                        "PDLLA가 결절 위험이 더 높다",
+                        "PDLLA가 결절 위험이 더 낮다",
+                        "둘은 완전히 동일하다",
+                        "PDLLA는 콜라겐 생성 효과가 없다"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "PDLLA(쥬베룩)는 입자가 둥글고 부드러워 PLLA(스컬트라)보다 결절 위험이 낮고 자연스러운 볼륨을 형성합니다.",
+                    "difficulty": "hard"
+                },
+                {
+                    "id": "skinbooster-q4",
+                    "question": "레필레오(셀럽주사)의 통증 레벨은?",
+                    "options": [
+                        "1 (거의 없음)",
+                        "2 (약간)",
+                        "3 (중간)",
+                        "4 (상)"
+                    ],
+                    "correct_answer": 0,
+                    "explanation": "레필레오는 통증 레벨 1로 거의 통증이 없으며, 즉시 생활이 가능합니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "skinbooster-q5",
+                    "question": "리쥬란 3회 패키지의 가격은?",
+                    "options": [
+                        "90만원",
+                        "100만원",
+                        "110만원",
+                        "120만원"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "리쥬란 힐러 3회 패키지는 110만원으로, 단품(40만원 × 3 = 120만원) 대비 10만원 할인됩니다.",
+                    "difficulty": "medium"
+                }
+            ]
+        },
+        {
+            "id": "lifting",
+            "name": "리프팅",
+            "questions": [
+                {
+                    "id": "lifting-q1",
+                    "question": "울쎄라 600샷의 샷당 단가는?",
+                    "options": [
+                        "3,000원",
+                        "3,333원",
+                        "4,000원",
+                        "5,000원"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "울쎄라 600샷은 200만원으로, 샷당 단가는 약 3,333원입니다. 300샷(120만원)보다 샷당 단가가 저렴합니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "lifting-q2",
+                    "question": "리프팅 시술 후 권장하는 세안 방법은?",
+                    "options": [
+                        "차가운 물로 세안",
+                        "뜨거운 물로 세안",
+                        "미온수로 세안",
+                        "세안 금지"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "리프팅 시술 후 3일간은 미온수로 세안하는 것이 권장되며, 차가운 팩은 지양해야 합니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "lifting-q3",
+                    "question": "울쎄라와 써마지의 주요 차이점은?",
+                    "options": [
+                        "울쎄라는 HIFU, 써마지는 RF 방식",
+                        "울쎄라는 RF, 써마지는 HIFU 방식",
+                        "둘 다 동일한 방식",
+                        "울쎄라는 레이저, 써마지는 고주파"
+                    ],
+                    "correct_answer": 0,
+                    "explanation": "울쎄라는 HIFU(고강도 집속 초음파) 방식이고, 써마지는 RF(고주파) 방식입니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "lifting-q4",
+                    "question": "슈링크 유니버스의 특징은?",
+                    "options": [
+                        "수입 장비로 가격이 비싸다",
+                        "국산 HIFU로 가격이 저렴하다",
+                        "RF 방식의 리프팅이다",
+                        "통증이 가장 심하다"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "슈링크 유니버스는 국산 HIFU 장비로, 울쎄라나 써마지보다 가격이 저렴하며 통증도 상대적으로 낮습니다(레벨 3).",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "lifting-q5",
+                    "question": "파셀라의 작용 원리는?",
+                    "options": [
+                        "표피층 타겟",
+                        "진피층 타겟",
+                        "심부 근막층(Fascia) 타겟",
+                        "피하지방층 타겟"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "파셀라는 심부 근막층(Fascia)을 타겟으로 하여 유착된 근막을 재배열하고 림프 순환을 촉진하는 근막리프팅입니다.",
+                    "difficulty": "hard"
+                }
+            ]
+        },
+        {
+            "id": "aftercare",
+            "name": "사후 관리",
+            "questions": [
+                {
+                    "id": "aftercare-q1",
+                    "question": "모든 시술에 공통으로 적용되는 금기 사항은?",
+                    "options": [
+                        "시술 후 3일간 음주 금지",
+                        "시술 후 1주일간 음주, 흡연, 사우나, 격한 운동 금지",
+                        "시술 후 1개월간 운동 금지",
+                        "특별한 금기 사항 없음"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "모든 시술 후 1주일간은 음주, 흡연, 사우나, 찜질방, 격한 운동을 금지해야 합니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "aftercare-q2",
+                    "question": "점 제거 레이저 시술 후 재생 테이프(듀오덤) 관리 방법은?",
+                    "options": [
+                        "진물이 나면 즉시 교체한다",
+                        "매일 교체한다",
+                        "진물이 올라와도 7~10일 유지한다",
+                        "하루만 붙이고 제거한다"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "재생 테이프는 진물이 올라와도 7~10일간 유지해야 하며, 억지로 교체하지 않아야 합니다.",
+                    "difficulty": "medium"
+                },
+                {
+                    "id": "aftercare-q3",
+                    "question": "혈관 폐쇄 징후 발생 시 골든타임은?",
+                    "options": [
+                        "1시간",
+                        "3시간",
+                        "6시간",
+                        "24시간"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "혈관 폐쇄 징후(피부가 검게 변함) 발생 시 골든타임은 6시간 이내이므로 즉시 원장에게 보고하고 환자를 내원시켜야 합니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "aftercare-q4",
+                    "question": "아나필락시스 쇼크의 증상은?",
+                    "options": [
+                        "약간의 붓기",
+                        "가벼운 멍",
+                        "호흡곤란, 두드러기",
+                        "약간의 통증"
+                    ],
+                    "correct_answer": 2,
+                    "explanation": "호흡곤란과 두드러기는 아나필락시스 쇼크의 증상으로, 즉시 119에 신고하고 응급처치를 해야 합니다.",
+                    "difficulty": "easy"
+                },
+                {
+                    "id": "aftercare-q5",
+                    "question": "PN과 PDRN의 차이점은?",
+                    "options": [
+                        "PN은 조직 재생, PDRN은 피부 장벽 강화",
+                        "PDRN은 조직 재생, PN은 피부 장벽 강화",
+                        "둘은 완전히 동일하다",
+                        "PN은 필러, PDRN은 보톡스 성분"
+                    ],
+                    "correct_answer": 1,
+                    "explanation": "PDRN은 조직 재생에 초점을 두고, PN(리쥬란 성분)은 점성이 높아 피부 구조 복원과 장벽 강화에 효과적입니다.",
+                    "difficulty": "hard"
+                }
+            ]
+        }
+    ],
+    "quiz_settings": {
+        "passing_score": 80,
+        "time_limit_minutes": 30,
+        "shuffle_questions": true,
+        "shuffle_options": true,
+        "show_explanation": true,
+        "retry_allowed": true
+    },
+    "scoring": {
+        "easy": 1,
+        "medium": 2,
+        "hard": 3
+    }
+}

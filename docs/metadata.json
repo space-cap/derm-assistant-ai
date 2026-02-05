@@ -1,0 +1,455 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2025-02-05",
+        "currency": "KRW (단위: 만원)",
+        "description": "피부과 신입 직원 온보딩 및 상담용 지능형 수가 데이터베이스"
+    },
+    "categories": [
+        {
+            "category_id": "botox",
+            "category_name": "보톡스 (Botox)",
+            "items": [
+                {
+                    "name": "주름 보톡스",
+                    "areas": [
+                        "이마",
+                        "미간",
+                        "눈가"
+                    ],
+                    "pricing": {
+                        "domestic": 5,
+                        "imported": 10
+                    },
+                    "notes": "이마 부위는 국산 8 / 수입 13 별도 구성 가능"
+                },
+                {
+                    "name": "사각턱 보톡스",
+                    "pricing": {
+                        "domestic": 10,
+                        "imported": 15
+                    },
+                    "options": [
+                        {
+                            "name": "턱관절 보톡스",
+                            "pricing": {
+                                "domestic": 15,
+                                "imported": 20
+                            }
+                        },
+                        {
+                            "name": "이갈이 보톡스(턱+턱관절)",
+                            "notes": "상담 필요"
+                        }
+                    ]
+                },
+                {
+                    "name": "바디 보톡스",
+                    "areas": [
+                        "승모근",
+                        "종아리"
+                    ],
+                    "unit": "100unit",
+                    "pricing": {
+                        "domestic": 15,
+                        "imported": 20
+                    }
+                },
+                {
+                    "name": "특수 부위 보톡스",
+                    "areas": [
+                        "침샘",
+                        "측두",
+                        "광대",
+                        "다한증"
+                    ],
+                    "pricing": {
+                        "domestic": 30,
+                        "imported": 40
+                    }
+                },
+                {
+                    "name": "스킨 보톡스",
+                    "sub_types": [
+                        "에어톡신",
+                        "모공",
+                        "턱라인",
+                        "얼굴전체"
+                    ],
+                    "pricing": {
+                        "domestic_range": [
+                            10,
+                            30
+                        ],
+                        "imported_range": [
+                            15,
+                            40
+                        ]
+                    },
+                    "packages": {
+                        "얼굴+목": {
+                            "domestic": 40,
+                            "imported": 50
+                        }
+                    }
+                }
+            ],
+            "clinical_info": {
+                "anesthesia": "아이스 마취 혹은 필요 시 연고 마취",
+                "recovery": "멍/붓기 1주 내외",
+                "effect_start": "표정주름 1~2주, 바디/턱 1개월 후",
+                "pain_level": 1
+            }
+        },
+        {
+            "category_id": "filler",
+            "category_name": "필러 (Filler)",
+            "items": [
+                {
+                    "name": "국산 필러",
+                    "product": "이니티움",
+                    "unit": "1cc",
+                    "price": 20
+                },
+                {
+                    "name": "수입 필러",
+                    "product": "벨로테로",
+                    "unit": "1cc",
+                    "price": 50
+                },
+                {
+                    "name": "엘란쎄",
+                    "description": "PCL 재생필러",
+                    "options": [
+                        {
+                            "name": "1년 유지",
+                            "price": 45
+                        },
+                        {
+                            "name": "2년 유지",
+                            "price": 50
+                        }
+                    ]
+                }
+            ],
+            "clinical_info": {
+                "anesthesia": "국소 마취(리도카인 포함 제품) 및 연고 마취",
+                "precautions": [
+                    "시술 후 2주간 압박 금지",
+                    "음주/흡연 제한"
+                ],
+                "red_flags": [
+                    "피부색 변함",
+                    "극심한 통증",
+                    "물집 발생 시 즉시 내원"
+                ],
+                "pain_level": 1
+            }
+        },
+        {
+            "category_id": "skin_booster",
+            "category_name": "스킨부스터 (Skin Booster)",
+            "items": [
+                {
+                    "name": "리쥬란 힐러",
+                    "unit": "2cc",
+                    "prices": {
+                        "single": 40,
+                        "package_3x": 110
+                    },
+                    "components": "연어 DNA(PN) 성분"
+                },
+                {
+                    "name": "쥬베룩",
+                    "unit": "1회",
+                    "prices": {
+                        "single": 70,
+                        "package_3x": 180
+                    },
+                    "components": "PDLLA+HA 복합 부스터"
+                },
+                {
+                    "name": "엑소좀",
+                    "unit": "1회",
+                    "prices": {
+                        "single": 70,
+                        "package_3x": 180
+                    },
+                    "components": "줄기세포 유래 전달체"
+                },
+                {
+                    "name": "울트라콜",
+                    "unit": "1회",
+                    "price": 70,
+                    "components": "PDO 성분 리퀴드 리프팅"
+                },
+                {
+                    "name": "레필레오",
+                    "alias": "셀럽주사",
+                    "unit": "3cc",
+                    "prices": {
+                        "single": 50,
+                        "package_3x": 120
+                    },
+                    "components": "줄기세포 배양액 + 고순도 HA(J-Complex)"
+                },
+                {
+                    "name": "잘루프로",
+                    "alias": "밀라노주사",
+                    "unit": "1회",
+                    "prices": {
+                        "single": 70,
+                        "package_3x": 180
+                    }
+                },
+                {
+                    "name": "아이리쥬란",
+                    "unit": "1cc",
+                    "prices": {
+                        "single": 25,
+                        "package_3x": 65
+                    }
+                }
+            ],
+            "clinical_info": {
+                "pain_levels": {
+                    "리쥬란 힐러": {
+                        "level": 4,
+                        "description": "상 (따끔거림)",
+                        "downtime": "엠보싱 1-3일"
+                    },
+                    "레필레오": {
+                        "level": 1,
+                        "description": "하 (거의 없음)",
+                        "downtime": "즉시 생활 가능"
+                    },
+                    "잘루프로": {
+                        "level": 1,
+                        "description": "하 (거의 없음)",
+                        "downtime": "즉시 생활 가능"
+                    },
+                    "쥬베룩": {
+                        "level": 3,
+                        "description": "중 (화끈거림)",
+                        "downtime": "붉은기 1-2일"
+                    }
+                },
+                "anesthesia": "연고 마취 혹은 불필요",
+                "duration": "10~20분"
+            }
+        },
+        {
+            "category_id": "lifting",
+            "category_name": "리프팅 레이저 (EBD)",
+            "items": [
+                {
+                    "name": "울쎄라",
+                    "type": "HIFU",
+                    "options": [
+                        {
+                            "shots": 300,
+                            "price": 120,
+                            "price_per_shot": 4000
+                        },
+                        {
+                            "shots": 600,
+                            "price": 200,
+                            "price_per_shot": 3333
+                        }
+                    ]
+                },
+                {
+                    "name": "써마지 FLX",
+                    "type": "RF",
+                    "options": [
+                        {
+                            "shots": 300,
+                            "price": 150,
+                            "price_per_shot": 5000
+                        },
+                        {
+                            "shots": 600,
+                            "price": 250,
+                            "price_per_shot": 4166
+                        }
+                    ]
+                },
+                {
+                    "name": "슈링크 유니버스",
+                    "type": "HIFU (국산)",
+                    "options": [
+                        {
+                            "shots": 300,
+                            "price": 27,
+                            "price_per_shot": 900
+                        },
+                        {
+                            "shots": 400,
+                            "price": 36,
+                            "price_per_shot": 900
+                        }
+                    ]
+                },
+                {
+                    "name": "튠페이스",
+                    "type": "고주파",
+                    "options": [
+                        {
+                            "energy": "20KJ",
+                            "price": 50
+                        },
+                        {
+                            "energy": "30KJ",
+                            "price": 100
+                        },
+                        {
+                            "energy": "60KJ",
+                            "price": 180
+                        }
+                    ]
+                },
+                {
+                    "name": "파셀라",
+                    "description": "근막리프팅",
+                    "duration": "20분",
+                    "price": 50,
+                    "mechanism": "심부 근막층(Fascia) 타겟, 유착된 근막 재배열 및 림프 순환 촉진"
+                }
+            ],
+            "clinical_info": {
+                "pain_level": {
+                    "울쎄라": {
+                        "level": 4,
+                        "description": "중상 (욱신거림)"
+                    },
+                    "써마지": {
+                        "level": 4,
+                        "description": "중상 (욱신거림)"
+                    },
+                    "슈링크": {
+                        "level": 3,
+                        "description": "중 (화끈거림)"
+                    }
+                },
+                "anesthesia": "연고 마취 (30~40분)",
+                "duration": "40~60분",
+                "recovery": "즉시 생활 가능, 붓기 1~2주",
+                "maintenance": "울쎄라/써마지 6개월~1년, 슈링크 1~3개월 간격",
+                "tips": "시술 후 3일간 미온수 세안 권장, 차가운 팩 지양"
+            }
+        }
+    ],
+    "special_packages": [
+        {
+            "package_name": "아이 패키지",
+            "target": "눈밑/눈가",
+            "composition": [
+                "튠아이 20K",
+                "아이슈링크 200샷",
+                "눈가 보톡스"
+            ],
+            "original_price": 59,
+            "event_price": 39,
+            "recommendation": "눈밑 꺼짐이 심한 경우 잘루프로 업셀링 권장"
+        },
+        {
+            "package_name": "알핏 주사 패키지",
+            "composition": [
+                "종아리 보톡스 200U",
+                "라인핏 1회",
+                "셀룰라이트 토닝 1회"
+            ],
+            "price": 49
+        },
+        {
+            "package_name": "리포핏 패키지",
+            "sessions": 3,
+            "details": {
+                "session_1": "튠바디 30분 + 보톡스 + 라인핏",
+                "session_2": "라인핏 + 리터치",
+                "session_3": "라인핏"
+            },
+            "price": 99
+        },
+        {
+            "package_name": "리쥬란 3회 패키지",
+            "composition": [
+                "리쥬란 힐러 2cc × 3회"
+            ],
+            "original_price": 120,
+            "package_price": 110,
+            "discount_rate": 8.3
+        }
+    ],
+    "aftercare": {
+        "common_precautions": [
+            "시술 후 1주일간 음주 금지",
+            "시술 후 1주일간 흡연 금지",
+            "시술 후 1주일간 사우나, 찜질방 금지",
+            "시술 후 1주일간 격한 운동 금지"
+        ],
+        "treatment_specific": {
+            "필러": [
+                "시술 후 2주간 강한 압력 금지",
+                "경락 마사지 2주간 금지"
+            ],
+            "리프팅": [
+                "너무 차가운 물 세안 지양",
+                "미온수 세안 권장"
+            ],
+            "점제거_레이저": [
+                "재생 테이프(듀오덤)는 진물이 올라와도 7~10일 유지",
+                "억지로 교체하지 말 것"
+            ]
+        },
+        "emergency_signs": [
+            {
+                "symptom": "시술 부위가 점점 검게 변함",
+                "cause": "혈관 폐쇄 징후",
+                "action": "즉시 원장에게 보고 및 환자 내원 조치"
+            },
+            {
+                "symptom": "참을 수 없는 통증",
+                "cause": "혈관 압박 또는 감염",
+                "action": "즉시 원장에게 보고"
+            },
+            {
+                "symptom": "물집 발생",
+                "cause": "피부 손상 또는 알레르기",
+                "action": "즉시 내원 안내"
+            }
+        ]
+    },
+    "ingredient_guide": {
+        "pdrn_vs_pn": {
+            "PDRN": "조직 재생에 초점",
+            "PN": "리쥬란 성분, 점성이 높아 피부 구조 복원과 장벽 강화에 효과적"
+        },
+        "plla_vs_pdlla": {
+            "PLLA": "스컬트라 성분, 강력한 콜라겐 생성 유도, 충분한 수화 필요 (결절 위험)",
+            "PDLLA": "쥬베룩 성분, 입자가 둥글고 부드러워 결절 위험 감소, 자연스러운 볼륨"
+        }
+    },
+    "onboarding_checklist": {
+        "mot_guide": [
+            "환자 내원 시 이름 호명 및 환대",
+            "이전 시술 경험 및 불편 사항 체크",
+            "상담 후 예상 소요 시간 및 사후 관리 안내",
+            "깔끔한 용모, 신뢰감 있는 목소리 톤 유지"
+        ],
+        "consultation_environment": [
+            "외부 소음 차단",
+            "적절한 조명",
+            "병원 소개 포트폴리오 비치"
+        ],
+        "complaint_handling": [
+            "고객의 말을 끝까지 경청",
+            "감정적으로 대응하지 않고 공감의 자세",
+            "불만을 병원 개선의 기회로 인식"
+        ],
+        "emergency_manual": {
+            "vascular_occlusion": "필러 시술 후 통증 악화 및 피부 변색 시 원장 즉시 보고",
+            "allergic_reaction": "가려움 및 급격한 부종 시 즉시 처치실 안내"
+        }
+    }
+}

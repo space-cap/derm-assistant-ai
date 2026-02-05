@@ -1,0 +1,249 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "last_updated": "2026-02-05",
+        "description": "패키지 할인 정보 및 추천 조합"
+    },
+    "packages": [
+        {
+            "id": "eye-package",
+            "name": "아이 패키지",
+            "category": "리프팅",
+            "target": "눈밑/눈가",
+            "composition": [
+                {
+                    "item": "튠아이 20K",
+                    "quantity": 1
+                },
+                {
+                    "item": "아이슈링크 200샷",
+                    "quantity": 1
+                },
+                {
+                    "item": "눈가 보톡스",
+                    "quantity": 1
+                }
+            ],
+            "original_price": 590000,
+            "event_price": 390000,
+            "discount_amount": 200000,
+            "discount_rate": 33.9,
+            "recommendation": "눈밑 꺼짐이 심한 경우 잘루프로 업셀링 권장",
+            "suitable_for": [
+                "눈밑 처짐",
+                "눈가 주름",
+                "다크서클"
+            ]
+        },
+        {
+            "id": "alfit-package",
+            "name": "알핏 주사 패키지",
+            "category": "바디",
+            "target": "종아리",
+            "composition": [
+                {
+                    "item": "종아리 보톡스 200U",
+                    "quantity": 1
+                },
+                {
+                    "item": "라인핏 1회",
+                    "quantity": 1
+                },
+                {
+                    "item": "셀룰라이트 토닝 1회",
+                    "quantity": 1
+                }
+            ],
+            "price": 490000,
+            "suitable_for": [
+                "종아리 축소",
+                "라인 정리",
+                "셀룰라이트 개선"
+            ]
+        },
+        {
+            "id": "lipofit-package",
+            "name": "리포핏 패키지",
+            "category": "바디",
+            "target": "전신",
+            "sessions": 3,
+            "details": {
+                "session_1": "튠바디 30분 + 보톡스 + 라인핏",
+                "session_2": "라인핏 + 리터치",
+                "session_3": "라인핏"
+            },
+            "price": 990000,
+            "suitable_for": [
+                "전신 체형 관리",
+                "지방 감소",
+                "바디 라인 정리"
+            ]
+        },
+        {
+            "id": "rejuran-3pack",
+            "name": "리쥬란 3회 패키지",
+            "category": "스킨부스터",
+            "target": "얼굴 전체",
+            "composition": [
+                {
+                    "item": "리쥬란 힐러 2cc",
+                    "quantity": 3
+                }
+            ],
+            "original_price": 1200000,
+            "package_price": 1100000,
+            "discount_amount": 100000,
+            "discount_rate": 8.3,
+            "interval": "2-4주 간격",
+            "suitable_for": [
+                "피부 재생",
+                "모공 개선",
+                "피부 탄력 증진"
+            ]
+        },
+        {
+            "id": "juvelook-3pack",
+            "name": "쥬베룩 3회 패키지",
+            "category": "스킨부스터",
+            "target": "얼굴 전체",
+            "composition": [
+                {
+                    "item": "쥬베룩",
+                    "quantity": 3
+                }
+            ],
+            "original_price": 2100000,
+            "package_price": 1800000,
+            "discount_amount": 300000,
+            "discount_rate": 14.3,
+            "interval": "2-4주 간격",
+            "suitable_for": [
+                "볼륨 개선",
+                "콜라겐 생성",
+                "피부 탄력"
+            ]
+        },
+        {
+            "id": "exosome-3pack",
+            "name": "엑소좀 3회 패키지",
+            "category": "스킨부스터",
+            "target": "얼굴 전체",
+            "composition": [
+                {
+                    "item": "엑소좀",
+                    "quantity": 3
+                }
+            ],
+            "original_price": 2100000,
+            "package_price": 1800000,
+            "discount_amount": 300000,
+            "discount_rate": 14.3,
+            "interval": "2-4주 간격",
+            "suitable_for": [
+                "피부 재생",
+                "안티에이징",
+                "피부 톤 개선"
+            ]
+        },
+        {
+            "id": "jalupro-3pack",
+            "name": "잘루프로 3회 패키지",
+            "category": "스킨부스터",
+            "target": "얼굴 전체",
+            "composition": [
+                {
+                    "item": "잘루프로",
+                    "quantity": 3
+                }
+            ],
+            "original_price": 2100000,
+            "package_price": 1800000,
+            "discount_amount": 300000,
+            "discount_rate": 14.3,
+            "interval": "2-4주 간격",
+            "suitable_for": [
+                "피부 재생",
+                "주름 개선",
+                "피부 탄력"
+            ]
+        },
+        {
+            "id": "refileo-3pack",
+            "name": "레필레오 3회 패키지",
+            "category": "스킨부스터",
+            "target": "얼굴 전체",
+            "composition": [
+                {
+                    "item": "레필레오 3cc",
+                    "quantity": 3
+                }
+            ],
+            "original_price": 1500000,
+            "package_price": 1200000,
+            "discount_amount": 300000,
+            "discount_rate": 20.0,
+            "interval": "2-4주 간격",
+            "suitable_for": [
+                "피부 보습",
+                "피부 톤 개선",
+                "즉각적인 효과"
+            ]
+        },
+        {
+            "id": "eye-rejuran-3pack",
+            "name": "아이리쥬란 3회 패키지",
+            "category": "스킨부스터",
+            "target": "눈가",
+            "composition": [
+                {
+                    "item": "아이리쥬란 1cc",
+                    "quantity": 3
+                }
+            ],
+            "original_price": 750000,
+            "package_price": 650000,
+            "discount_amount": 100000,
+            "discount_rate": 13.3,
+            "interval": "2-4주 간격",
+            "suitable_for": [
+                "눈가 주름",
+                "다크서클",
+                "눈밑 처짐"
+            ]
+        }
+    ],
+    "package_rules": {
+        "auto_apply": true,
+        "description": "동일 시술을 3회 이상 선택 시 자동으로 패키지 할인 적용",
+        "conditions": [
+            "패키지는 중복 적용 불가",
+            "패키지 할인과 이벤트 할인 중 큰 금액 적용",
+            "패키지 시술은 권장 간격 내 완료 권장"
+        ]
+    },
+    "upselling_recommendations": [
+        {
+            "base_treatment": "울쎄라",
+            "recommended_add": [
+                "리쥬란 힐러",
+                "쥬베룩"
+            ],
+            "reason": "리프팅 후 피부 재생 효과 극대화"
+        },
+        {
+            "base_treatment": "보톡스",
+            "recommended_add": [
+                "스킨부스터"
+            ],
+            "reason": "주름 개선과 피부 탄력 동시 관리"
+        },
+        {
+            "base_treatment": "필러",
+            "recommended_add": [
+                "리쥬란 힐러",
+                "레필레오"
+            ],
+            "reason": "볼륨 형성 후 피부 질감 개선"
+        }
+    ]
+}
