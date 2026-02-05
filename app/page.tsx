@@ -1,65 +1,168 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
+import { Card, CardBody, CardHeader } from '@/components/ui/Card';
+import { CATEGORIES } from '@/lib/constants';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="space-y-12">
+      {/* Hero Section */}
+      <section className="text-center space-y-6 py-12">
+        <h1 className="text-5xl font-bold text-gray-900">
+          🏥 Derm Assistant AI
+        </h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          신입 피부과 직원을 위한 지능형 온보딩 플랫폼
+          <br />
+          복잡한 진료 수가와 시술 정보를 쉽게 학습하세요
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <Link href="/fees">
+            <Button size="large" variant="primary">
+              📊 수가 조회 시작하기
+            </Button>
+          </Link>
+          <Link href="/quiz">
+            <Button size="large" variant="outline">
+              📝 학습 퀴즈 풀기
+            </Button>
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-gray-900 text-center">
+          주요 기능
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card hover>
+            <CardHeader>
+              <h3 className="text-xl font-bold text-gray-900">
+                📊 수가 조회
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-600">
+                보톡스, 필러, 리프팅, 스킨부스터 등 다양한 시술의 수가를 한눈에 확인하세요.
+                국산/수입 제품별 가격 비교도 가능합니다.
+              </p>
+            </CardBody>
+          </Card>
+
+          <Card hover>
+            <CardHeader>
+              <h3 className="text-xl font-bold text-gray-900">
+                🧮 비용 계산기
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-600">
+                여러 시술을 조합하여 총 비용을 계산하고, 패키지 할인을 자동으로 적용받으세요.
+              </p>
+            </CardBody>
+          </Card>
+
+          <Card hover>
+            <CardHeader>
+              <h3 className="text-xl font-bold text-gray-900">
+                📚 시술 가이드
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-600">
+                각 시술의 특징, 효과, 주의사항, 사후 관리 방법을 상세하게 안내합니다.
+              </p>
+            </CardBody>
+          </Card>
+
+          <Card hover>
+            <CardHeader>
+              <h3 className="text-xl font-bold text-gray-900">
+                📝 학습 퀴즈
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-600">
+                25개의 퀴즈 문제로 시술 지식을 테스트하고, 상세한 해설로 학습하세요.
+              </p>
+            </CardBody>
+          </Card>
+
+          <Card hover>
+            <CardHeader>
+              <h3 className="text-xl font-bold text-gray-900">
+                ⭐ 즐겨찾기
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-600">
+                자주 찾는 시술을 즐겨찾기에 추가하여 빠르게 접근하세요.
+              </p>
+            </CardBody>
+          </Card>
+
+          <Card hover>
+            <CardHeader>
+              <h3 className="text-xl font-bold text-gray-900">
+                🎁 패키지 할인
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-600">
+                동일 시술 3회 이상 선택 시 자동으로 패키지 할인이 적용됩니다.
+              </p>
+            </CardBody>
+          </Card>
         </div>
-      </main>
+      </section>
+
+      {/* Categories Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-gray-900 text-center">
+          시술 카테고리
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {CATEGORIES.map((category) => (
+            <Link key={category.id} href={`/fees?category=${category.id}`}>
+              <Card hover className="h-full">
+                <CardBody className="text-center space-y-2">
+                  <div className="text-4xl">{category.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {category.name}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {category.description}
+                  </p>
+                </CardBody>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12 text-center text-white space-y-6">
+        <h2 className="text-3xl font-bold">
+          지금 바로 시작하세요!
+        </h2>
+        <p className="text-lg opacity-90 max-w-2xl mx-auto">
+          Derm Assistant AI와 함께 피부과 전문가로 성장하세요.
+          복잡한 수가 정보를 쉽고 빠르게 학습할 수 있습니다.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <Link href="/fees">
+            <Button size="large" variant="secondary">
+              📊 수가 조회하기
+            </Button>
+          </Link>
+          <Link href="/guide">
+            <Button size="large" variant="ghost" className="bg-white/20 hover:bg-white/30 text-white">
+              📚 가이드 보기
+            </Button>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
